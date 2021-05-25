@@ -4,24 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
     <title>Transcriber</title>
+
 </head>
 <body>
-    <div id="speechContainer">
-        <h1>Upload File</h1>
-        <form method="POST" enctype="multipart/form-data">
-            <input type="file" name="file">
+    <div id="disc">
+        <div id="disclaimer">
+            Currently this tools only supports .wav format.
+            Click <a href="https://audio.online-convert.com/convert-to-wav">here</a> to covert your audio to .wav format
+        </div>
+    </div>
+    <header>
+        <div class="overlay">
+            <h1>Spunk Transcriber</h1>
+            <h3>Upload...Wait...Get Result</h3>
             <br>
-            <input type="submit" value="Transcribe">
-        </form>
+        </div>
+    </header>
+    <main>
+    <p>
+    <div id="speechContainer">
+        <div id="stat">
+            <h2>Upload File</h2>
+            <br>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="choose" aria-label="Choose WAV File">
+                
+                <label for="submit" id="res">
+                    <input type="submit" value="Transcribe" >
+                    <img src="/static/icon.png" alt="Transcribe" height="20px">
+                </label>
+            </form>
+        </div>
         {% if transcript!= "" %}
         <div id="speechTranscriptContainer">
-            <h1>Transcript</h1>
-            <p>{{ transcript }}</p>
+            <center>
+                <h2>Transcript</h2>
+                <p>{{ transcript }}</p>
+            </center>
         </div>
         {% endif %}
     </div>
+    </p>
+    </main>
 </body>
 </html>

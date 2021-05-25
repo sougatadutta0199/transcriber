@@ -1,0 +1,107 @@
+#disclaimer {
+    margin-left: 1%;
+}
+#disc {
+    background-color: bisque;
+}
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{height:100vh;}
+header {
+	background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
+	
+}
+
+h1 {
+	font-size: 5rem;
+	margin-bottom: 30px;
+}
+
+h3, p {
+	margin-bottom: 30px;
+}
+
+#res {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover{
+	cursor: pointer;
+}
+html {
+    background-color: #333;
+    font-family: Tahoma, sans-serif;
+}
+#speechContainer {
+    /* margin: 1%; */
+    color: #FFF;
+}
+
+#stat {
+	display: grid;
+	place-items: center;
+}
+
+#stat form {
+	display: grid;
+	place-items: center;
+}
+
+#stat form #choose {
+	border: 2px solid white;
+	/* border-radius: 5rem; */
+	height: 2.5rem;
+	padding: 0.5rem;
+	margin: 1rem 0 2rem;
+}
+
+#res {
+	transition: all 0.3s ease-in-out;
+	font-family: Tahoma, sans-serif;
+	display: flex;
+	align-items: center;
+	gap: 0.145rem;
+}
+
+#res input {
+	background: transparent;
+	outline: none;
+	appearance: none;
+	border: none;
+}
+
+#res:hover {
+	box-shadow: 0 4px 10px black;
+	transform: scale(1.1);
+}
+
+@media (orientation: portrait) {
+	h1 {
+		font-size: 3.5rem;
+	}
+}
+
+#speechTranscriptContainer{
+	padding: 1rem;
+}
